@@ -12,10 +12,23 @@ usage() {
 }
 
 config_read() {
-	# read each repository in start.txt
-	# if there if a folder	
-	# git clone --depth=1 ~/.vim/pack/vendor/start/[repo]
-	ls -1 ~/.vim/pack/vendor/start/*/.git/config
+	# read each repository in start.txt either clone or update it
+	while read u; do
+		export NAME=$(basename -- $u)
+		if [[ -d ~/.vim/pack/vendor/start/$NAME ]]; then
+			echo $NAME - exists
+			cd ~/.vim/pack/vendor/start/$NAME
+			git pull
+		else 
+			echo $NAME - cloning
+			git clone --depth=1 $u ~/.vim/pack/vendor/start/$NAME 
+		fi
+
+	done<$DIR/start.txt
+
+	# symlink vimrc
+	find  ~/.vimrc -exec rm -rf {} \;
+	ln -s $DIR/.vimrc ~/.vimrc
 }
 
 config_write() {
@@ -29,10 +42,11 @@ config_write() {
 		fi
 	done
 
+	# push results to git
 	cd $DIR
 	git add --all  .
 	git commit -m "Update `date`"
-	# git push origin
+	git push origin master
 }
 
 [[ "$1" == "read" ]] && { config_read; exit 0; }
