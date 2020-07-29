@@ -1,4 +1,3 @@
-
 https://github.com/neoclide/coc.nvim
 https://github.com/editorconfig/editorconfig-vim
 https://github.com/junegunn/fzf

@@ -20,7 +20,8 @@ config_read() {
 
 config_write() {
         # read each repository under ./.vim/pack/vendor/start/
-	echo > $DIR/start.txt
+	find $DIR/start.txt -exec rm -rf {} \;
+	touch $DIR/start.txt
 	for v in $(ls -1 ~/.vim/pack/vendor/start/*/.git/config); do
 		export URL=$(cat $v | grep url | sed s/url\ =//g)
 		if [[ "$URL" != "" ]]; then
