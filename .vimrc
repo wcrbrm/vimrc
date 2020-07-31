@@ -6,7 +6,7 @@ set nu
 set relativenumber
 set nohlsearch
 set hidden
-"set noerrorbells
+set noerrorbells
 set nowrap
 set smartcase
 set noswapfile
@@ -171,3 +171,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 " packloadall
+
+map <C-p> :Files<CR>
+nmap <leader>p :GFiles<CR>
+nmap <leader>; :Buffers<CR>
