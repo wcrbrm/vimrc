@@ -175,3 +175,16 @@ autocmd BufReadPost *
 map <C-p> :Files<CR>
 nmap <leader>p :GFiles<CR>
 nmap <leader>; :Buffers<CR>
+
+let g:rustfmt_autosave = 1
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
