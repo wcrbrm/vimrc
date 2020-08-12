@@ -20,5 +20,4 @@ https://github.com/sheerun/vim-polyglot
 https://github.com/uarun/vim-protobuf
 https://github.com/airblade/vim-rooter
 https://github.com/posva/vim-vue
-https://github.com/lyokha/vim-xkbswitch
 https://github.com/mattn/webapi-vim
