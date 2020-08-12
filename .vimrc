@@ -1,3 +1,5 @@
+" colorscheme shine
+colorscheme desert
 set foldmethod=syntax
 set foldlevel=3
 
