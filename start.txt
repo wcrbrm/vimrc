@@ -12,12 +12,16 @@ https://github.com/vim-airline/vim-airline
 https://github.com/tpope/vim-fugitive
 https://github.com/airblade/vim-gitgutter
 https://github.com/fatih/vim-go
+https://github.com/hdiniz/vim-gradle
 https://github.com/jparise/vim-graphql
 https://github.com/machakann/vim-highlightedyank
 https://github.com/pangloss/vim-javascript
 https://github.com/maxmellon/vim-jsx-pretty
 https://github.com/sheerun/vim-polyglot
 https://github.com/uarun/vim-protobuf
+https://github.com/tpope/vim-rhubarb
 https://github.com/airblade/vim-rooter
+https://github.com/juliosueiras/vim-terraform-completion
 https://github.com/posva/vim-vue
+https://github.com/lyokha/vim-xkbswitch
 https://github.com/mattn/webapi-vim
